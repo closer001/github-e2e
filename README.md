@@ -29,7 +29,7 @@ EMAIL=seu-email@exemplo.com
 SENHA=sua-senha-do-github
 USUARIO=seu-usuario-do-github
 ```
-
+> ⚠️ **Observação:** A conta do GitHub utilizada **não pode ter autenticação de dois fatores (2FA) ativada**, pois os testes automatizados não suportam essa etapa extra de autenticação. 
 
 ## Verificação da Configuração
 
