@@ -12,7 +12,7 @@ Projeto de testes end-to-end para o GitHub usando Cypress.
 
 1. Clone o repositório:
 ```bash
-git clone <seu-repositorio>
+git clone https://github.com/closer001/github-e2e
 cd github-e2e
 ```
 
