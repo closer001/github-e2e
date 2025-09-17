@@ -1,7 +1,9 @@
 Cypress.Commands.add("createRepository", (repoName) => {
   cy.log('Iniciando criação de repositório...');
 
-  cy.xpath('/html/body/div[1]/div[6]/div/div/aside/div/div/loading-context/div/div[1]/div/div[1]/a')
+  cy.wait(2000);
+
+  cy.xpath('//*[@data-target="loading-context.details"]//div[contains(@class,"Details")]/div[contains(@class,"js-repos-container")]//a[contains(@class,"Button--primary")]')
     .click()
     .then(() => cy.log('Botão de novo repositório clicado'));
 
@@ -21,7 +23,9 @@ Cypress.Commands.add("createRepository", (repoName) => {
     .click()
     .then(() => cy.log('Botão de criar repositório clicado'));
 
-  cy.xpath('/html/body/div[1]/div[6]/div/main/div/div[1]/div[1]/div[1]/strong/a')
+  cy.wait(2000)
+
+  cy.xpath('//div[@id="repo-title-component"]//strong[@itemprop="name"]/a')
     .should('exist')
     .should('be.visible')
     .should('contain', nomeRepo)
